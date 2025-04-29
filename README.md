@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 ### Running the Game
 ```bash
-python game.py
+python main.py
 ```
 ### Online Multiplayer Mode
 
