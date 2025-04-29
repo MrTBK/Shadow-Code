@@ -1,42 +1,113 @@
-# Shadow-Code
+# ♟️ Shadow-Code
 
-## Introduction
-Shadow-Code is a chess game that allows both local play against a DRL (Deep Reinforcement Learning) agent and online multiplayer. The game is designed to provide an engaging experience with real-time multiplayer capabilities, a DRL agent for AI play, and an easy-to-use interface.
+**Shadow-Code** is a feature-rich chess game that supports both local AI battles and online multiplayer. Play against a Deep Reinforcement Learning (DRL) agent trained from scratch or connect with friends over a real-time socket-based network—all with an elegant Pygame-based interface and animated visuals.
 
-## Features
-- **Local play vs DRL**: Play against a trained AI powered by Deep Reinforcement Learning (DRL).
-- **Online multiplayer**: Play online with other players in real-time using socket-based communication.
-- **Piece movement & promotion**: Pieces move automatically when clicked, and pawn promotion is supported with a selection interface.
-- **Sounds & UI**: Sound effects for move, capture, and promotion, along with a graphical interface rendered using Pygame.
+---
 
-## Installation
+## 🚀 Features
 
-### Clone the repository
+- ✅ **Local Play vs AI**  
+  Play against a trained Deep Q-Network (DQN)-based DRL agent.
+
+- 🌐 **Online Multiplayer**  
+  Host or join real-time matches using TCP sockets.
+
+- 🎞️ **Smooth Animations**  
+  Enjoy sliding piece animations for a polished experience.
+
+- 👑 **Promotion Interface**  
+  Promote pawns with a clean graphical selection.
+
+- 🔊 **Sound Effects**  
+  Custom sounds for moves, captures, and promotions.
+
+- 📋 **Move History Sidebar**  
+  Track your game progress with a live move list.
+
+---
+
+## 🛠 Installation
+
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/MrTBK/Shadow-Code.git
 cd Shadow-Code
 ```
-### Installing Dependencies
-Use the following command to install all the required libraries:
+
+### 2. Install dependencies
+
+Install the required packages via pip:
+
 ```bash
 pip install -r requirements.txt
 ```
-### Running the Game
+
+> **Note**: Requires Python 3.8+ and PyTorch.
+
+---
+
+## 🧠 Running the Game
+
+To start the game:
+
 ```bash
 python main.py
 ```
-### Online Multiplayer Mode
 
-To start a multiplayer game, you can host or join a game:
+---
 
-**Hosting a game:**
+## 🎮 Modes of Play
 
-In the main menu, select the "Host" option.
+### 🧑‍💻 Local Play (vs DRL)
 
-The game will open a socket and wait for a connection from another player.
+- Select **Local** from the menu.
+- Play against a Deep Q-Learning agent trained on legal chess states.
 
-**Joining a game:**
+### 🌐 Online Multiplayer
 
-In the main menu, select the "Join" option.
+#### Host a Game
 
-Enter the IP address of the host and join the game.
+- Select **Online** → **Host**.
+- Wait for an opponent to connect.
+- Game starts automatically after connection.
+
+#### Join a Game
+
+- Select **Online** → **Join**.
+- Enter the IP address of the host machine.
+- Connect and start playing.
+
+---
+
+## 📁 Project Structure
+
+```
+Shadow-Code/
+├── assets/               # Piece images & sound files
+├── dqn.py                # DQN agent definition and utilities
+├── game.py               # Game logic and rendering
+├── interface.py          # UI handling (board, promotion UI, sounds)
+├── server.py             # Socket-based networking
+├── main.py               # Entry point
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🧠 DRL Agent Training
+
+The AI uses a Deep Q-Network with a flat board tensor input. Training code and logs are included in the project for reproducibility. If no `dqn_checkpoint.pt` exists, training can be resumed automatically.
+
+---
+
+## 📬 Contributions
+
+Contributions and pull requests are welcome! If you have ideas for improving the AI, UI, or networking robustness, feel free to open an issue or PR.
+
+---
+
+## 📜 License
+
+MIT License © [MrTBK](https://github.com/MrTBK)
