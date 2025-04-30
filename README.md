@@ -98,16 +98,7 @@ Shadow-Code/
 
 ## 🧠 DRL Agent Training
 
-The AI uses a Deep Q-Network with a flat board tensor input. Training code and logs are included in the project for reproducibility. If no `dqn_checkpoint.pt` exists, training can be resumed automatically.
+Our AI uses a Deep Q-Network with a flat board tensor input. Training code and logs are included in the project for reproducibility. If no `dqn_checkpoint.pt` exists, training can be resumed automatically.
 
 ---
 
-## 📬 Contributions
-
-Contributions and pull requests are welcome! If you have ideas for improving the AI, UI, or networking robustness, feel free to open an issue or PR.
-
----
-
-## 📜 License
-
-MIT License © [MrTBK](https://github.com/MrTBK)
